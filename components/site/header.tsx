@@ -1,6 +1,6 @@
 "use client";
 
-import {FileText, Menu, X} from "lucide-react";
+import {Download, FileText, Menu, X} from "lucide-react";
 import {useState} from "react";
 
 import {ThemeToggle} from "@/components/site/theme-toggle";
@@ -47,7 +47,6 @@ export function Header({items, brand}: HeaderProps) {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={portfolioData.contact.resume}
-              download="Sanket_Raikwar_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground shadow-xs"
@@ -61,7 +60,6 @@ export function Header({items, brand}: HeaderProps) {
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href={portfolioData.contact.resume}
-              download="Sanket_Raikwar_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1.5 text-[11px] font-semibold text-primary"
@@ -100,17 +98,29 @@ export function Header({items, brand}: HeaderProps) {
                 {item.label}
               </a>
             ))}
-            <a
-              href={portfolioData.contact.resume}
-              download="Sanket_Raikwar_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setOpen(false)}
-              className="mt-1 flex items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-semibold text-primary"
-            >
-              <FileText className="h-4 w-4" />
-              <span>Download Resume (PDF)</span>
-            </a>
+            <div className="mt-1 grid grid-cols-2 gap-2">
+              <a
+                href={portfolioData.contact.resume}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-1.5 rounded-2xl border border-primary/30 bg-primary/10 px-3 py-3 text-xs font-semibold text-primary"
+              >
+                <FileText className="h-4 w-4" />
+                <span>View Resume</span>
+              </a>
+              <a
+                href={portfolioData.contact.resumeDownload || "/resume.pdf"}
+                download="Sanket_Raikwar_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-1.5 rounded-2xl border border-primary/30 bg-primary/20 px-3 py-3 text-xs font-semibold text-primary"
+              >
+                <Download className="h-4 w-4" />
+                <span>Download</span>
+              </a>
+            </div>
           </nav>
         </div>
       </div>

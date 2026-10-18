@@ -90,7 +90,8 @@ const contactCards = [
   {
     label: "Resume",
     value: "Download PDF",
-    href: portfolioData.contact.resume,
+    href: portfolioData.contact.resumeDownload || "/resume.pdf",
+    download: "Sanket_Raikwar_Resume.pdf",
     icon: FileText
   },
   {
@@ -176,7 +177,7 @@ export function HomePage() {
 
               <div className="flex flex-wrap gap-2.5">
                 <ActionLink
-                  href={portfolioData.contact.resume}
+                  href={portfolioData.contact.resumeDownload || "/resume.pdf"}
                   label="Download Resume"
                   icon={Download}
                   download="Sanket_Raikwar_Resume.pdf"
@@ -614,6 +615,7 @@ export function HomePage() {
                       {enabled ? (
                         <a
                           href={card.href}
+                          download={"download" in card ? (card.download as string) : undefined}
                           target={card.href.startsWith("mailto:") ? undefined : "_blank"}
                           rel={card.href.startsWith("mailto:") ? undefined : "noreferrer"}
                           className="block h-full"
