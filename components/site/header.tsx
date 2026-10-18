@@ -5,6 +5,7 @@ import {useState} from "react";
 
 import {ThemeToggle} from "@/components/site/theme-toggle";
 import {Button} from "@/components/ui/button";
+import {portfolioData} from "@/data/portfolio";
 import {cn} from "@/lib/utils";
 
 type NavItem = {
@@ -45,7 +46,7 @@ export function Header({items, brand}: HeaderProps) {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href="/resume.pdf"
+              href={portfolioData.contact.resume}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground shadow-xs"
@@ -58,7 +59,7 @@ export function Header({items, brand}: HeaderProps) {
 
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="/resume.pdf"
+              href={portfolioData.contact.resume}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1.5 text-[11px] font-semibold text-primary"
@@ -98,7 +99,7 @@ export function Header({items, brand}: HeaderProps) {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href={portfolioData.contact.resume}
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
