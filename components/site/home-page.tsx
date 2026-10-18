@@ -179,6 +179,7 @@ export function HomePage() {
                   href={portfolioData.contact.resume}
                   label="Download Resume"
                   icon={Download}
+                  download="Sanket_Raikwar_Resume.pdf"
                 />
                 <ActionLink
                   href={portfolioData.contact.github}

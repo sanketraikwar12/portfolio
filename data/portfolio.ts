@@ -266,7 +266,7 @@ export const portfolioData = {
     email: "raikwarsanket97@gmail.com",
     github: "https://github.com/sanketraikwar12",
     linkedin: "https://www.linkedin.com/in/sanket-raikwar-06793b391/",
-    resume: "https://drive.google.com/file/d/17kcKSChBbGps_Kr5SwTNsu48iGKVSBOz/view?usp=sharing",
+    resume: "https://drive.google.com/uc?export=download&id=17kcKSChBbGps_Kr5SwTNsu48iGKVSBOz",
     githubUsername: "sanketraikwar12",
     location: "India"
   },

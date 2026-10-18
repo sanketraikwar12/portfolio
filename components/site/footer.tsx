@@ -54,6 +54,7 @@ export function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
+                  download={item.label === "Resume" ? "Sanket_Raikwar_Resume.pdf" : undefined}
                   target={item.href.startsWith("mailto:") ? undefined : "_blank"}
                   rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
                   aria-label={item.label}

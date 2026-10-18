@@ -20,6 +20,19 @@ const nextConfig: NextConfig = {
         hostname: "streak-stats.demolab.com"
       }
     ]
+  },
+  async headers() {
+    return [
+      {
+        source: "/resume.pdf",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: 'attachment; filename="Sanket_Raikwar_Resume.pdf"'
+          }
+        ]
+      }
+    ];
   }
 };
 

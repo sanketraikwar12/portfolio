@@ -47,6 +47,7 @@ export function Header({items, brand}: HeaderProps) {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={portfolioData.contact.resume}
+              download="Sanket_Raikwar_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground shadow-xs"
@@ -60,6 +61,7 @@ export function Header({items, brand}: HeaderProps) {
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href={portfolioData.contact.resume}
+              download="Sanket_Raikwar_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1.5 text-[11px] font-semibold text-primary"
@@ -100,6 +102,7 @@ export function Header({items, brand}: HeaderProps) {
             ))}
             <a
               href={portfolioData.contact.resume}
+              download="Sanket_Raikwar_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
