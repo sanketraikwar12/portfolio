@@ -10,196 +10,256 @@ export type Project = {
   tech: string[];
   features: string[];
   accent: string;
+  githubUrl?: string;
+  liveUrl?: string;
+};
+
+export type HackathonActivity = {
+  title: string;
+  type: string;
+  organization: string;
+  highlight: string;
 };
 
 export const portfolioData = {
   name: "Sanket Raikwar",
   title: "AI + Full Stack Developer",
   headline:
-    "AI + Full Stack Developer | React.js | Next.js | FastAPI | Django | Python | Machine Learning | Power BI",
+    "B.Tech Computer Science Engineering student with hands-on experience in Full Stack Development, AI/GenAI, Machine Learning, and Data Analytics.",
   description:
-    "Portfolio of Sanket Raikwar, a Computer Science Engineering student building scalable web applications, AI-powered solutions, and data-driven products.",
+    "Skilled in developing responsive web applications, REST APIs, AI-powered applications, database-driven systems, and interactive dashboards using React.js, Next.js, Node.js, Express.js, Django, FastAPI, Python, TypeScript, MongoDB, MySQL, SQL, and Power BI.",
   availability:
-    "Currently seeking Software Engineering, Full Stack Development, AI/ML, and Data Analytics opportunities.",
+    "Strong interest in Full Stack Development, AI Engineering, Generative AI, and Data Analytics opportunities.",
   location: "India",
   education: {
     institution: "Jagran Lakecity University",
-    degree: "B.Tech Computer Science Engineering",
-    duration: "2023 - 2027"
+    degree: "Bachelor of Technology (B.Tech) in Computer Science Engineering",
+    duration: "Expected Graduation: 2027"
   },
   heroHighlights: [
     {
       value: "Full Stack + AI",
-      label: "Modern product engineering with intelligent workflows"
+      label: "Responsive web apps, REST APIs, and GenAI workflows"
     },
     {
       value: "ML to BI",
-      label: "From model development to business dashboards"
+      label: "Model development, data pipelines, and Power BI dashboards"
     },
     {
-      value: "2023 - 2027",
-      label: "Computer Science Engineering at Jagran Lakecity University"
+      value: "Graduation: 2027",
+      label: "B.Tech Computer Science at Jagran Lakecity University"
     }
   ],
   about: [
-    "I am a Computer Science Engineering student passionate about building scalable web applications, AI-powered solutions, and data-driven products.",
-    "My expertise includes Full Stack Development using React.js, Next.js, Node.js, FastAPI, and Django, along with Machine Learning, Android Development, and Data Analytics using Python and Power BI.",
-    "I enjoy turning complex ideas into polished digital experiences that feel fast, useful, and recruiter-ready."
+    "I am a B.Tech Computer Science Engineering student with hands-on experience in Full Stack Development, AI/GenAI, Machine Learning, and Data Analytics.",
+    "Skilled in developing responsive web applications, REST APIs, AI-powered applications, database-driven systems, and interactive dashboards using React.js, Next.js, Node.js, Express.js, Django, FastAPI, Python, TypeScript, MongoDB, MySQL, SQL, and Power BI.",
+    "Experienced in building practical projects and applying modern software development practices to solve real-world problems. Strong interest in Full Stack Development, AI Engineering, Generative AI, and Data Analytics."
   ],
   focusAreas: [
     {
-      title: "Current Focus",
-      body: "Building production-quality full stack applications with thoughtful UX, strong APIs, and performance-first architecture."
+      title: "Full Stack & APIs",
+      body: "Building scalable web apps and robust REST APIs with React.js, Next.js, Django, Node.js, and FastAPI."
     },
     {
-      title: "Career Goal",
-      body: "Grow into a software engineer who can bridge product thinking, AI capabilities, and scalable web development."
+      title: "AI & Machine Learning",
+      body: "Developing AI-powered applications, GenAI agent workflows, model benchmarking, and intelligent interfaces."
     },
     {
-      title: "What I Bring",
-      body: "Hands-on work across frontend, backend, machine learning, Android, and analytics with a practical, project-driven mindset."
+      title: "Data Analytics & BI",
+      body: "Designing database-driven systems and interactive Power BI dashboards translating data into actionable insights."
     }
   ],
   skills: [
     {
-      title: "Frontend",
-      summary:
-        "Modern interface development for responsive, polished product experiences.",
-      items: [
-        "React.js",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Tailwind CSS",
-        "Bootstrap"
-      ]
+      title: "Programming Languages",
+      summary: "Core programming and algorithmic problem solving across system and web layers.",
+      items: ["C", "Python", "JavaScript", "TypeScript"]
     },
     {
-      title: "Backend",
-      summary:
-        "API design, business logic, and scalable application foundations.",
+      title: "Frontend Development",
+      summary: "Modern responsive interfaces, reusable UI components, and accessible design.",
+      items: ["React.js", "Next.js", "Bootstrap", "Tailwind CSS", "HTML", "CSS"]
+    },
+    {
+      title: "Backend Development",
+      summary: "High-performance REST API services, business logic, and server-side architecture.",
       items: ["Node.js", "Express.js", "Django", "FastAPI"]
     },
     {
-      title: "Database",
-      summary: "Structured and document-based data management for applications.",
-      items: ["MongoDB", "MySQL"]
+      title: "Databases",
+      summary: "Relational and document storage, data modeling, queries, and optimization.",
+      items: ["MongoDB", "MySQL", "SQLite", "PostgreSQL"]
     },
     {
-      title: "Programming",
-      summary:
-        "Problem-solving across systems, application development, and algorithms.",
-      items: ["C", "C++", "Java", "Python"]
-    },
-    {
-      title: "Machine Learning",
-      summary:
-        "Data preparation, model experimentation, and deployment-oriented workflows.",
-      items: ["Scikit-Learn", "Pandas", "NumPy", "XGBoost"]
+      title: "AI & Machine Learning",
+      summary: "Model development, data preprocessing, machine learning algorithms, and Generative AI.",
+      items: [
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Data Preprocessing",
+        "Model Development",
+        "AI Applications",
+        "Generative AI"
+      ]
     },
     {
       title: "Data Analytics",
-      summary:
-        "Insight generation with reporting, dashboards, and business intelligence.",
-      items: ["SQL", "Power BI", "Data Visualization"]
+      summary: "Business intelligence reporting, SQL data transformations, and interactive dashboards.",
+      items: ["Power BI", "SQL", "Data Visualization", "Dashboard Development"]
     },
     {
-      title: "Android",
-      summary:
-        "Native Android development with strong Java and Kotlin foundations.",
-      items: ["Java", "Kotlin", "Android Studio"]
-    },
-    {
-      title: "Tools",
-      summary:
-        "Workflow, collaboration, and development tooling for fast delivery.",
+      title: "Tools & Technologies",
+      summary: "Version control, API testing, debugging, and modern collaborative engineering tools.",
       items: ["Git", "GitHub", "Postman", "VS Code"]
     }
   ] satisfies SkillCategory[],
   projects: [
     {
-      name: "DevFolio AI",
-      summary: "AI-powered developer portfolio builder platform.",
-      tech: ["Next.js", "FastAPI", "MongoDB", "OpenAI"],
+      name: "SmartShop – E-Commerce Platform",
+      summary:
+        "Full-stack e-commerce platform with product browsing, shopping cart, order management, database-driven functionality, and an administrative dashboard.",
+      tech: ["Python", "Django", "Bootstrap", "JavaScript", "SQLite", "PostgreSQL"],
       features: [
-        "AI Portfolio Builder",
-        "Resume Generator",
-        "Project Showcase",
-        "Analytics Dashboard"
+        "Full-stack product browsing & cart workflow",
+        "Order management & responsive user interfaces",
+        "Database-driven product & category catalog",
+        "Administrative dashboard for inventory & orders"
       ],
-      accent: "from-cyan-500/30 via-sky-500/10 to-transparent"
+      accent: "from-blue-500/25 via-sky-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12"
     },
     {
-      name: "Amazon Clone",
-      summary: "Commerce-focused web application inspired by modern storefront flows.",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      name: "VidMind-AI",
+      summary:
+        "AI-focused application integrating intelligent video understanding and content workflows into a responsive, user-friendly web interface.",
+      tech: ["AI/ML", "Python", "Web Technologies", "FastAPI"],
       features: [
-        "Authentication",
-        "Product Catalog",
-        "Shopping Cart",
-        "Order Management"
+        "AI-focused intelligent video processing",
+        "Automated transcript & key insights analysis",
+        "User-friendly responsive web interface",
+        "Practical AI workflows and low-latency interaction"
       ],
-      accent: "from-amber-500/25 via-orange-500/10 to-transparent"
+      accent: "from-violet-500/25 via-indigo-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12/VidMind-AI"
     },
     {
-      name: "AI Chatbot",
-      summary: "Conversational interface for real-time AI-assisted interactions.",
-      tech: ["React.js", "FastAPI", "Python"],
+      name: "Orbit",
+      summary:
+        "Modern web application developed with a responsive, user-focused interface, reusable component architecture, and interactive client functionality.",
+      tech: ["React.js", "JavaScript", "Web Technologies", "Tailwind CSS"],
       features: [
-        "Real-time Chat",
-        "AI Responses",
-        "API Integration"
+        "Modern responsive & user-focused interface",
+        "Reusable component architecture",
+        "Interactive client-side functionality",
+        "Consistent and polished user experience"
       ],
-      accent: "from-violet-500/25 via-indigo-500/10 to-transparent"
+      accent: "from-cyan-500/25 via-teal-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12"
     },
     {
-      name: "Power BI Dashboard",
-      summary: "Business analytics dashboard for KPI monitoring and reporting.",
-      tech: ["Power BI", "SQL"],
+      name: "Shopzy",
+      summary:
+        "Local business discovery and price comparison platform featuring integrated Bhopal tourism navigation and store discovery.",
+      tech: ["TypeScript", "Next.js", "React.js", "Tailwind CSS"],
       features: [
-        "KPI Tracking",
-        "Business Analytics",
-        "Data Visualization"
+        "Local business discovery engine",
+        "Price comparison & store locator",
+        "Bhopal tourism navigation & guide",
+        "Mobile-first responsive UX"
       ],
-      accent: "from-emerald-500/25 via-teal-500/10 to-transparent"
+      accent: "from-emerald-500/25 via-teal-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12/shopzy"
+    },
+    {
+      name: "Ask Any Bot",
+      summary:
+        "Intelligent conversational AI chatbot providing low-latency question answering across general, technical, and academic domains.",
+      tech: ["Python", "FastAPI", "React.js", "Vercel"],
+      features: [
+        "Real-time streaming conversational AI",
+        "Multi-domain question answering",
+        "Low-latency API architecture",
+        "Cloud-deployed live web application"
+      ],
+      accent: "from-amber-500/25 via-orange-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12/ask-any-bot",
+      liveUrl: "https://ask-any-bot.vercel.app"
+    },
+    {
+      name: "AutoML & Data Analytics",
+      summary:
+        "Automated machine learning engine and analytics workspace for rapid exploratory data analysis, model benchmarking, and KPI reporting.",
+      tech: ["Python", "Scikit-learn", "Pandas", "Power BI", "NumPy"],
+      features: [
+        "Automated model training & benchmarking",
+        "Exploratory data analysis & preprocessing",
+        "Power BI dashboards & KPI reporting",
+        "Model metric evaluation & visual insights"
+      ],
+      accent: "from-rose-500/25 via-pink-500/10 to-transparent",
+      githubUrl: "https://github.com/sanketraikwar12/AI-Data-Analytics-and-Automated-Machine-Learning"
     }
   ] satisfies Project[],
   certifications: [
-    "AWS Cloud Practitioner Essentials",
-    "AWS Cloud Practitioner (CLF-C02)",
-    "AI Agent Builder Workshop",
-    "GitHub Copilot Certification",
-    "Claude Code for Beginners",
-    "Learning Linux Basics",
-    "React JS Certification"
+    "AWS Cloud Practitioner (CLF-C02) – Course Completion, KodeKloud",
+    "GitHub Copilot Certification, KodeKloud",
+    "AI-Assisted Development, KodeKloud",
+    "Building AI Agents with Claude Agent SDK, KodeKloud",
+    "Learning Linux Basics Course & Labs, KodeKloud",
+    "Computer Architecture, KodeKloud"
   ],
-  achievements: [
+  hackathons: [
     {
-      value: "15+",
-      label: "Technical Certifications",
-      detail: "Continuous upskilling across cloud, AI, frontend, and tooling."
+      title: "KRIYETA 5.0",
+      type: "36-Hour Hackathon",
+      organization: "Acropolis Institute of Engineering & Technology, Indore",
+      highlight: "Collaborated in an intensive 36-hour sprint building real-world technical solutions."
     },
+    {
+      title: "SISTec Innovation Hackathon 3.0",
+      type: "Innovation Hackathon",
+      organization: "SISTec, Bhopal",
+      highlight: "Engineered innovative application prototypes under competitive hackathon constraints."
+    },
+    {
+      title: "AI Agent Builder Workshop",
+      type: "Technical Workshop",
+      organization: "BotCampus AI",
+      highlight: "Hands-on experience architecting autonomous AI agent workflows and tool calling."
+    },
+    {
+      title: "Viksit Bharat Young Leaders Dialogue (VBYLD) 2027",
+      type: "National Leadership Dialogue",
+      organization: "MY Bharat, Ministry of Youth Affairs & Sports",
+      highlight: "Selected participant contributing to youth-led innovation and national tech initiatives."
+    }
+  ] satisfies HackathonActivity[],
+  achievements: [
     {
       value: "Full Stack",
       label: "Developer",
-      detail: "Comfortable building end-to-end experiences from UI to APIs."
+      detail: "React.js, Next.js, Node.js, Express.js, Django, FastAPI"
     },
     {
-      value: "AI/ML",
-      label: "Enthusiast",
-      detail: "Interested in intelligent systems, applied ML, and automation."
+      value: "AI / GenAI",
+      label: "Engineer",
+      detail: "Building AI applications, Claude Agent SDK, and Generative AI"
     },
     {
-      value: "Data",
-      label: "Analytics Practitioner",
-      detail: "Experience translating data into dashboards and insights."
+      value: "Data / BI",
+      label: "Analytics",
+      detail: "Power BI dashboards, SQL analysis, and interactive reporting"
     },
     {
-      value: "Hackathon",
+      value: "6+",
+      label: "Certifications",
+      detail: "AWS Cloud Practitioner, GitHub Copilot, Linux, AI Agents"
+    },
+    {
+      value: "Hackathons",
       label: "Participant",
-      detail: "Enjoys fast iteration, problem solving, and team collaboration."
+      detail: "KRIYETA 5.0 (36h), SISTec Innovation 3.0, BotCampus AI"
     }
   ],
   contact: {
@@ -212,14 +272,16 @@ export const portfolioData = {
   },
   keywords: [
     "Sanket Raikwar",
-    "AI Developer",
     "Full Stack Developer",
-    "Next.js Portfolio",
-    "React Developer",
-    "FastAPI Developer",
-    "Django Developer",
+    "AI Engineer",
+    "Generative AI",
+    "React.js",
+    "Next.js",
+    "FastAPI",
+    "Django",
+    "Python",
     "Machine Learning",
     "Power BI",
-    "Software Engineering"
+    "Data Analytics"
   ]
 };

@@ -1,8 +1,7 @@
 "use client";
 
 import {motion, useReducedMotion} from "framer-motion";
-import {useEffect, useState} from "react";
-
+import {useMounted} from "@/lib/use-mounted";
 import {cn} from "@/lib/utils";
 
 type RevealProps = {
@@ -13,11 +12,7 @@ type RevealProps = {
 
 export function Reveal({children, className, delay = 0}: RevealProps) {
   const reducedMotion = useReducedMotion();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useMounted();
 
   return (
     <motion.div

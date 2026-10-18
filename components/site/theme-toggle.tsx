@@ -2,17 +2,13 @@
 
 import {MoonStar, SunMedium} from "lucide-react";
 import {useTheme} from "next-themes";
-import {useEffect, useState} from "react";
+import {useMounted} from "@/lib/use-mounted";
 
 import {Button} from "@/components/ui/button";
 
 export function ThemeToggle() {
   const {resolvedTheme, setTheme} = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useMounted();
 
   if (!isMounted) {
     return (

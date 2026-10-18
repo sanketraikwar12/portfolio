@@ -18,9 +18,9 @@ const buttonVariants = cva(
           "border border-border/70 bg-transparent text-foreground hover:border-primary/40 hover:bg-primary/5"
       },
       size: {
-        default: "h-11 px-5",
-        lg: "h-12 px-6 text-base",
-        sm: "h-9 px-4 text-xs"
+        default: "h-10 px-4 text-sm",
+        lg: "h-11 px-5 text-sm",
+        sm: "h-8 px-3 text-xs"
       }
     },
     defaultVariants: {

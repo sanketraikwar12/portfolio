@@ -1,22 +1,35 @@
 "use client";
 
-import {useEffect, useState} from "react";
+import {useEffect, useState, useSyncExternalStore} from "react";
+import {useMounted} from "@/lib/use-mounted";
+
+function subscribePointerMedia(callback: () => void) {
+  const media = window.matchMedia("(pointer: fine)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  media.addEventListener("change", callback);
+  reducedMotion.addEventListener("change", callback);
+  return () => {
+    media.removeEventListener("change", callback);
+    reducedMotion.removeEventListener("change", callback);
+  };
+}
+
+function getPointerSnapshot() {
+  return (
+    window.matchMedia("(pointer: fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+}
 
 export function InteractiveCursor() {
-  const [enabled, setEnabled] = useState(false);
+  const enabled = useSyncExternalStore(subscribePointerMedia, getPointerSnapshot, () => false);
   const [position, setPosition] = useState({x: 0, y: 0});
-  const [isMounted, setIsMounted] = useState(false);
+  const isMounted = useMounted();
 
   useEffect(() => {
-    setIsMounted(true);
-    const media = window.matchMedia("(pointer: fine)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    if (!media.matches || reducedMotion.matches) {
+    if (!enabled) {
       return;
     }
-
-    setEnabled(true);
 
     const handleMove = (event: MouseEvent) => {
       setPosition({x: event.clientX, y: event.clientY});
@@ -27,7 +40,7 @@ export function InteractiveCursor() {
     return () => {
       window.removeEventListener("mousemove", handleMove);
     };
-  }, []);
+  }, [enabled]);
 
   if (!isMounted || !enabled) {
     return null;

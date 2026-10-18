@@ -12,13 +12,13 @@ export function SectionHeading({
   description
 }: SectionHeadingProps) {
   return (
-    <div className="max-w-3xl space-y-4">
+    <div className="max-w-2xl space-y-2.5">
       <Badge>{eyebrow}</Badge>
-      <div className="space-y-3">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
           {title}
         </h2>
-        <p className="text-base leading-7 text-muted-foreground sm:text-lg">
+        <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
           {description}
         </p>
       </div>

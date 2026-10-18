@@ -1,4 +1,4 @@
-import {Github, Linkedin, Mail} from "lucide-react";
+import {FileText, Github, Linkedin, Mail} from "lucide-react";
 
 import {portfolioData} from "@/data/portfolio";
 import {isConfiguredLink} from "@/lib/site";
@@ -20,6 +20,11 @@ const socialLinks = [
       ? `mailto:${portfolioData.contact.email}`
       : "",
     icon: Mail
+  },
+  {
+    label: "Resume",
+    href: portfolioData.contact.resume,
+    icon: FileText
   }
 ];
 
@@ -49,10 +54,10 @@ export function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
                   aria-label={item.label}
-                  className="glass-panel flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-transform duration-300 hover:-translate-y-1 hover:text-foreground"
+                  className="glass-panel flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:text-foreground"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
